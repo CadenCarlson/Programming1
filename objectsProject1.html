@@ -1,0 +1,98 @@
+<script src="objectsProject1.js"></script>
+
+<head>
+  <title>Car Simulator</title>
+  <style>
+    #boxes {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    div {
+      float: left;
+      height: 470px;
+      width: 23%;
+      padding: 0 10px;
+    }
+    #column1 {
+      background-color: #ffffff;
+    }
+    #column2 {
+      background-color: #ffffff;
+      width: 43%;
+    }
+    #column3 {
+      background-color: #ffffff;
+    }
+    h2 {
+      color: #000000;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<style>
+  .button {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 75px;
+    text-align: justify;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: wait;
+  }
+  
+  .button:after {
+    content: "";
+    background: #d20117;
+    display: block;
+    position: absolute;
+    padding-top: 1px;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: 1px;
+    opacity: 0;
+    transition: all 1s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  </style>
+
+<body>
+  <main id="boxes">
+    <h2>Car Simulator</h2>
+    <div id="column1">
+      <h3>Car Specs</h3> 
+      <h4 id="model"></h4>  <h4 id="make"></h4> <h4 id="year"></h4> <h4 id="topSpeed"></h4> <h4 id="acceleration"></h4></div>
+    </div>
+    <div id="column2">
+      <h3>Accelerate and Decelerate</h3> 
+      <div><button class="button", onclick="car.accelerate()" >Accelerate</button></div>
+      <div><button class="button", onclick="car.decelerate()">Decelerate</button></div>
+      <div><h4>Stomp on the BRAKES<input type="checkbox" id="myCheck" onclick="brakingMethod()"></h4></div>
+    </div>
+    <div id="column3">
+      <h2>Speed</h2> 
+      <h4 id="speedDisplay">                   </h4>
+    </div>
+  </main>
+</body>
+
+<script>document.getElementById('model').innerHTML = model</script>
+<script>document.getElementById('make').innerHTML = make</script>
+<script>document.getElementById('year').innerHTML = year</script>
+<script>document.getElementById('topSpeed').innerHTML = topSpeed</script>
+<script>document.getElementById('acceleration').innerHTML = accerlation</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
